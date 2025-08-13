@@ -30,10 +30,10 @@ export const ProcessSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Building Your Program
+            Building Your Branded Apparel Program
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Our proven process ensures that your business needs are met and your team gets exactly what they need to succeed.
+            Our proven process ensures that your business needs are met and your employees get exactly what they need to stay safe and represent your brand.
           </p>
         </div>
         
