@@ -27,9 +27,9 @@ export const HeroSection = () => {
               Get Started
             </Button>
             <Button 
-              variant="outline" 
+              variant="secondary" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg"
+              className="font-semibold px-8 py-4 text-lg"
             >
               Learn More
             </Button>
