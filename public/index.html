@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branded Apparel Programs | Professional Workwear Solutions</title>
+    <meta name="description" content="Custom branded apparel programs that keep your team safe and professional. Workwear solutions for every budget and business size.">
+    <meta name="author" content="Dress Right">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Branded Apparel Programs | Professional Workwear Solutions">
+    <meta property="og:description" content="Custom branded apparel programs that keep your team safe and professional. Workwear solutions for every budget and business size.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/src/assets/hero-workwear.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Branded Apparel Programs | Professional Workwear Solutions">
+    <meta name="twitter:description" content="Custom branded apparel programs that keep your team safe and professional.">
+    <meta name="twitter:image" content="/src/assets/hero-workwear.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/">
+    
+    <style>
+        :root {
+            --primary: 214 100% 25%;
+            --primary-foreground: 0 0% 98%;
+            --secondary: 30 100% 50%;
+            --secondary-foreground: 0 0% 0%;
+            --accent: 214 50% 95%;
+            --accent-foreground: 214 100% 25%;
+            --background: 0 0% 100%;
+            --foreground: 214 15% 15%;
+            --card: 0 0% 100%;
+            --card-foreground: 214 15% 15%;
+            --muted: 214 20% 95%;
+            --muted-foreground: 214 15% 45%;
+            --border: 214 20% 90%;
+            --input: 214 20% 90%;
+            --ring: 214 100% 25%;
+            
+            --shadow-professional: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+            --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: hsl(var(--foreground));
+            background-color: hsl(var(--background));
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: url('/src/assets/hero-workwear.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: hsl(var(--primary) / 0.8);
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 64rem;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: white;
+        }
+        
+        .hero .highlight {
+            display: block;
+            color: hsl(var(--secondary));
+        }
+        
+        .hero p {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(var(--secondary) / 0.9);
+        }
+        
+        .btn-secondary {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+        }
+        
+        .btn-secondary:hover {
+            background-color: hsl(var(--secondary) / 0.9);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
+        }
+        
+        .btn-outline:hover {
+            background-color: hsl(var(--accent));
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--accent) / 0.2));
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: hsl(var(--primary));
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 96rem;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature-card {
+            background-color: hsl(var(--card) / 0.5);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(4px);
+        }
+        
+        .feature-card:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-2px);
+        }
+        
+        .feature-image {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+        
+        .feature-card:hover .feature-image img {
+            transform: scale(1.05);
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: hsl(var(--secondary) / 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .feature-card:hover .feature-icon {
+            background-color: hsl(var(--secondary) / 0.2);
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: hsl(var(--primary));
+        }
+        
+        .feature-description {
+            color: hsl(var(--muted-foreground));
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 5rem 0;
+            background-color: hsl(var(--primary));
+            color: white;
+        }
+        
+        .process .section-title,
+        .process .section-subtitle {
+            color: white;
+        }
+        
+        .process .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .process-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 112rem;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .process-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(4px);
+        }
+        
+        .process-card:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .process-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: hsl(var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .process-card:hover .process-icon {
+            transform: scale(1.1);
+        }
+        
+        .process-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+        
+        .process-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, hsl(var(--accent) / 0.3), hsl(var(--background)));
+        }
+        
+        .cta-card {
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 3rem;
+            text-align: center;
+            background-color: hsl(var(--card) / 0.8);
+            border-radius: 0.5rem;
+            backdrop-filter: blur(4px);
+            box-shadow: var(--shadow-professional);
+        }
+        
+        .cta-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: hsl(var(--primary));
+        }
+        
+        .cta-description {
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 8rem;
+            background: linear-gradient(to top, hsl(var(--background)), transparent);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    BRANDED APPAREL
+                    <span class="highlight">PROGRAMS</span>
+                </h1>
+                <p>Custom solutions that make managing your branded workwear program easy and effective.</p>
+                <div class="button-group">
+                    <button class="btn btn-secondary">Get Started</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">BRANDED APPAREL PROGRAMS CAN BE EASY</h2>
+                <p class="section-subtitle">Our comprehensive branded workwear solutions ensure your team looks professional while staying safe.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="/src/assets/safety-worker.jpg" alt="Keep Your People Safe - Professional workwear safety program">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--secondary))" stroke-width="2">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Keep Your People Safe</h3>
+                        <p class="feature-description">Keep your people safe and comfortable with professional apparel care and training programs.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="/src/assets/team-efficiency.jpg" alt="Represent Your Brand - Professional branded workwear solutions">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--secondary))" stroke-width="2">
+                                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Represent Your Brand</h3>
+                        <p class="feature-description">Represent your brand properly with in-house customization and professional design services.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="/src/assets/scalable-solutions.jpg" alt="Budget-Friendly Programs - Affordable workwear solutions for every business">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--secondary))" stroke-width="2">
+                                <path d="m3 17 6-6 4 4 8-8"/>
+                                <path d="m14 5 7 7"/>
+                                <path d="m21 12v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Budget-Friendly Programs</h3>
+                        <p class="feature-description">Programs that won't break the bank with flexible options for every budget and business size.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Building Your Branded Apparel Program</h2>
+                <p class="section-subtitle">Our proven process ensures that your business needs are met and your employees get exactly what they need to stay safe and represent your brand.</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M6 8.5 9 12l-3 3.5L2 12l4-3.5Z"/>
+                            <path d="M6 8.5 9 12l-3 3.5"/>
+                            <path d="m13 12 3-3.5L20 12l-4 3.5L13 12Z"/>
+                            <path d="m13 12 3-3.5L20 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">We Listen</h3>
+                    <p class="process-description">We listen to you and your team about what works and what doesn't work in your current setup.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M9 12h6m-6-4h6M9 16h6"/>
+                            <path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z"/>
+                            <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">We Plan</h3>
+                    <p class="process-description">We propose and develop solutions for pain points, and create your custom program from this framework.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                            <path d="M9 18h6"/>
+                            <path d="M10 22h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">We Implement</h3>
+                    <p class="process-description">Our team executes the plan with precision, ensuring smooth deployment and integration.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <path d="m9 11 3 3L22 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">We Optimize</h3>
+                    <p class="process-description">Continuous monitoring and optimization to ensure your program delivers maximum value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">Join thousands of businesses who have transformed their operations with our professional solutions.</p>
+                <div class="button-group">
+                    <button class="btn btn-primary">Schedule a Demo</button>
+                    <button class="btn btn-outline">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dress Right",
+        "description": "Professional branded apparel programs and workwear solutions",
+        "url": "https://yoursite.com",
+        "serviceType": "Branded Apparel Programs",
+        "areaServed": "United States",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Workwear Solutions",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Safety Workwear Programs",
+                        "description": "Professional apparel care and safety training programs"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Brand Representation Services",
+                        "description": "In-house customization and professional design services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Budget-Friendly Programs",
+                        "description": "Flexible workwear solutions for every budget and business size"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>
